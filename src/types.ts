@@ -13,6 +13,22 @@ export type HNItem = {
 	url?: string;
 };
 
+export type HNAPIResponse = {
+	author: string;
+	children: HNAPIResponse[];
+	created_at: string;
+	created_at_i: number;
+	id: number;
+	options: number[];
+	parent_id: number | null;
+	points: number;
+	story_id: number;
+	text: string | null;
+	title: string | null;
+	type: "story" | "comment" | "poll" | "pollopt" | "job";
+	url: string;
+};
+
 export type MyResultSet<T> = ResultSet & { rows: T[] };
 
 export interface NotificationResponse {
